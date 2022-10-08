@@ -1,7 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const router = express.Router();
 const bodyParser = require("body-parser");
 const UserRoute = require("./routes/user.route");
 require("dotenv").config({ path: "./.env" });
