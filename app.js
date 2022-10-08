@@ -2,13 +2,13 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const bodyParser = require("body-parser");
-const UserRoute = require("./routes/user.route");
+const SellerRoute = require("./routes/seller.route");
 require("dotenv").config({ path: "./.env" });
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use("/", UserRoute);
+app.use("/", SellerRoute);
 
 mongoose.connect(process.env.MONGODB_URI);
 
